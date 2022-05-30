@@ -4,5 +4,62 @@
 }
 
 <h1>Form</h1>
+<p> Choose your favorite Web language:</p>
+@*<form action="">
+        <label>1) What is the best footballer in the world</label><br>
+        <span><input type="radio" id="Messi" name="fav_football" value="Messi">Messi</span>
+        <span><input type="radio" id="Ronaldo" name="fav_football" value="Ronaldo">Ronaldo</span>
+        <span><input type="radio" id="Maradona" name="fav_football" value="Maradona">Maradona</span>
+        <span><input type="radio" id="Pele" name="fav_football" value="Pele">Pele</span>
+
+        <br>
+        <br />
+
+        <input type="submit" value="Submit">
+    </form>*@
+
+    <script>
+        var id1 = {
+            "question": "Who is the best footballer in the world",
+            "option1": "Messi",
+            "option2": "Ronaldo",
+            "option3": "Neymar",
+            "option3": "Mane"
+
+        };
+        id2 = {
+            "question": "Who is the best footballer in the world",
+            "option1": "Messi",
+            "option2": "Ronaldo",
+            "option3": "Neymar",
+            "option3": "Mane"
+        };
+        document.write(id1);
+    </script>
+
+
+
+
+<br />
+<table class="table">
+    <tr>
+        <td>1) What is the best footballer in the world</td>
+    </tr>
+    <tr>
+        <td>
+            <input id="option1" type="radio" name="option1" class="rounded-bottom" value="option1" /> Option 1
+            <input id="option2" type="radio" name="option2" class="rounded-bottom" value="option2" /> Option 2
+            <input id="option3" type="radio" name="option3" class="rounded-bottom" value="option3" /> Option 3
+            <input id="option4" type="radio" name="option4" class="rounded-bottom" value="option4" /> Option 4
+
+
+
+        </td>
+    </tr>
+
+
+
+</table>
+<button type="button" id="btn1" value="Submit" class="btn-success">Submit</button>
 
 
