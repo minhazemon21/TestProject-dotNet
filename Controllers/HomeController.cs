@@ -47,5 +47,9 @@ namespace TestProject.Controllers
             return View();
 
         }
+        public IActionResult Question()
+        {
+            return View();
+        }
     }
 }
