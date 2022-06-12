@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Question";
 }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,42 +15,39 @@
             <tbody id="mytable"></tbody>
 
         </table>
-        <input type="submit"  value="Submit"/>
+        <input type="submit" value="Submit" />
     </form>
 </div>
 <script>
     var myArry = [
-        { 'question': '1) Who is the best footballer in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
-        { 'question': '2) Who is the best Cricketer in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
-        { 'question': '3) Who is the best teacher in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
-        { 'question': '4) Who is the best journalist in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
-
+        { 'question': ' Who is the best footballer in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
+        { 'question': ' Who is the best Cricketer in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
+        { 'question': ' Who is the best teacher in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
+        { 'question': ' Who is the best journalist in the world', 'option1': 'M', 'option2': 'N', 'option3': 'P', 'option4': 'Q' },
     ]
     buildTable(myArry)
     function buildTable(data) {
         var table = document.getElementById('mytable')
-        for (var i = 0; i < data.length; i++) {
+        var c = 1;
+        for (var i = 0; i <= data.length; i++) {
             var row = `<tr>
-							<td>${data[i].question}</td>
-							
-					  </tr>
+                            <td>${i+c} ${data[i].question}</td>
+
+                      </tr>
                       <tr>
                         <td><input id="${data[i].option1}" type="radio" name="${data[i].question}" class="rounded - bottom" value="${data[i].option1}" /> ${data[i].option1}</td>
-							
+
                         </tr>
                        <tr>
                         <td><input id="${data[i].option2}" type="radio" name="${data[i].question}" class="rounded - bottom" value="${data[i].option2}" /> ${data[i].option2}</td>
-
                         </tr>
                         <tr>
                         <td><input id="${data[i].option3}" type="radio" name="${data[i].question}" class="rounded - bottom" value="${data[i].option3}" /> ${data[i].option3}</td>
-
                         </tr>
                         <tr>
                         <td><input id="${data[i].option4}" type="radio" name="${data[i].question}" class="rounded - bottom" value="${data[i].option4}" /> ${data[i].option4}</td>
-
                         </tr>
-                      
+
                       `
             table.innerHTML += row
         }
